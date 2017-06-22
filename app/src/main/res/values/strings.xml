@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">CourseDemo</string>
+    <string name="commitBtn_name">Commit</string>
+    <string name="title_activity_login">Sign in</string>
+</resources>
