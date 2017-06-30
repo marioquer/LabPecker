@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TabHost;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -20,45 +21,20 @@ import cn.marioquer.labpecker.R;
 public class MainActivity extends AppCompatActivity {
 
     Context context = MainActivity.this;
-    private TextView textView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        textView = (TextView) findViewById(R.id.result_content);
-        try {
-            URL url = new URL("https://api.github.com/search/repositories?q=android&sort=stars");
-            new getListTask().execute(url);
-        } catch (MalformedURLException e) {
-            e.printStackTrace();
-        }
+
+
+        TabHost tabHost = (TabHost) findViewById(R.id.tabHost);
+        tabHost.setup();
+        tabHost.addTab(tabHost.newTabSpec("one").setIndicator("班级").setContent(R.id.group));
+        tabHost.addTab(tabHost.newTabSpec("two").setIndicator("作业").setContent(R.id.homework));
+        tabHost.addTab(tabHost.newTabSpec("three").setIndicator("考试").setContent(R.id.exam));
+        tabHost.addTab(tabHost.newTabSpec("four").setIndicator("练习").setContent(R.id.practice));
     }
-
-
-    public class getListTask extends AsyncTask<URL, Void, String> {
-        @Override
-        protected String doInBackground(URL... params) {
-            URL url = params[0];
-            String st = null;
-            try {
-                st = NetworkUtil.getResponseFromHttpUrl(url);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            return st;
-        }
-
-        @Override
-        protected void onPostExecute(String s) {
-            if (s != null && !s.equals("")) {
-                textView.setText(s);
-            }
-        }
-
-
-    }
-
 
     //button的onclick方法
     public void jumpTo(View view) {
@@ -76,8 +52,6 @@ public class MainActivity extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
-
-
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

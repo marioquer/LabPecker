@@ -22,7 +22,10 @@ public class RetrofitUtil {
     private static OkHttpClient httpClient = new OkHttpClient();
 
     public static <T> T getRetroService(final Class<T> service) {
-        return getRetroService(service, null, null);
+        if (retrofit == null)
+            return getRetroService(service, null, null);
+        else
+            return retrofit.create(service);
     }
 
     public static <T> T getRetroService(final Class<T> service, String username, String password) {

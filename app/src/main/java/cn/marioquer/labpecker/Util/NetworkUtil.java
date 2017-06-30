@@ -51,21 +51,7 @@ public class NetworkUtil {
 //        String username = "nanguangtailang";
 //        String password = "123";
 //
-//        String json = "{\"username\":\""+username+"\",\"password\":\""+password+"\"}";
-//        RequestBody requestBody = RequestBody.create(MediaType.parse("application/json; charset=utf-8"), json);
-//
-//        Call<User> call = RetrofitUtil.getRetroService(LoginService.class).login(requestBody);
-//        call.enqueue(new Callback<User>() {
-//            @Override
-//            public void onResponse(Call<User> call, Response<User> response) {
-//                System.out.println(response.body().getUsername());
-//            }
-//
-//            @Override
-//            public void onFailure(Call<User> call, Throwable t) {
-//
-//            }
-//        });
+
 
         Call<List<Group>> call= RetrofitUtil.getRetroService(TeacherService.class,"liuqin","123").getGroups();
         call.enqueue(new Callback<List<Group>>() {
