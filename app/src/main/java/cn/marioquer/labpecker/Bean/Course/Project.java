@@ -1,4 +1,4 @@
-package cn.marioquer.labpecker.Bean;
+package cn.marioquer.labpecker.Bean.Course;
 
 import java.util.List;
 

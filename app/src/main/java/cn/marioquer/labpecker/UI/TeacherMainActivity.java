@@ -1,33 +1,24 @@
 package cn.marioquer.labpecker.UI;
 
 import android.content.Context;
-import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TabHost;
-import android.widget.TextView;
 import android.widget.Toast;
 
-import java.io.IOException;
-import java.net.MalformedURLException;
-import java.net.URL;
-
-import cn.marioquer.labpecker.Util.NetworkUtil;
 import cn.marioquer.labpecker.R;
 
-public class MainActivity extends AppCompatActivity {
+public class TeacherMainActivity extends AppCompatActivity {
 
-    Context context = MainActivity.this;
+    Context context = TeacherMainActivity.this;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-
+        setContentView(R.layout.activity_teacher_main);
         TabHost tabHost = (TabHost) findViewById(R.id.tabHost);
         tabHost.setup();
         tabHost.addTab(tabHost.newTabSpec("one").setIndicator("班级").setContent(R.id.group));

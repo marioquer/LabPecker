@@ -16,7 +16,7 @@
         android:roundIcon="@mipmap/ic_launcher_labpecker"
         android:supportsRtl="true"
         android:theme="@style/Night">
-        <activity android:name=".UI.MainActivity"></activity>
+        <activity android:name=".UI.TeacherMainActivity"></activity>
         <activity
             android:name=".UI.LoginActivity"
             android:label="@string/app_name">

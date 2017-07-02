@@ -10,6 +10,11 @@ import retrofit2.http.POST;
  */
 
 public interface LoginService {
+    /**
+     * 登录
+     * @param requestBody
+     * @return
+     */
     @POST("user/auth")
     Call<User> login(@Body RequestBody requestBody);
 }

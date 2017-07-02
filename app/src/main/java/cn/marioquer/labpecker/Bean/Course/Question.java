@@ -1,4 +1,6 @@
-package cn.marioquer.labpecker.Bean;
+package cn.marioquer.labpecker.Bean.Course;
+
+import cn.marioquer.labpecker.Bean.User;
 
 /**
  * Created by marioquer on 2017/6/30.

@@ -33,7 +33,7 @@ public class LoginPresenterImpl implements LoginPresenter {
         loginView.showProgress(true);
         loginView.loginError(false);
 
-        Call<User> call = RetrofitUtil.getRetroService(LoginService.class).login(requestBody);
+        Call<User> call = RetrofitUtil.getRetroService(LoginService.class,username,password).login(requestBody);
         call.enqueue(new Callback<User>() {
             @Override
             public void onResponse(Call<User> call, Response<User> response) {
