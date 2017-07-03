@@ -1,5 +1,6 @@
 package cn.marioquer.labpecker.Bean.Course;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
@@ -7,7 +8,7 @@ import java.util.List;
  * exam, exercise, homework
  */
 
-public class Project {
+public class Project implements Serializable{
     int id;
     String title;
     String description;

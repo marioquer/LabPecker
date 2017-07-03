@@ -1,10 +1,12 @@
 package cn.marioquer.labpecker.Bean;
 
+import java.io.Serializable;
+
 /**
  * Created by marioquer on 2017/6/29.
  */
 
-public class User {
+public class User implements Serializable {
 
     int id;
     String username;

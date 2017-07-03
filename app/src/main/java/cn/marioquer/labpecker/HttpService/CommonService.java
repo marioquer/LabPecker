@@ -18,7 +18,7 @@ public interface CommonService {
      * @return
      */
     @GET("course/{courseId}/exam")
-    Call<List<Project>> getExam(@Path("courseId") int courseid);
+    Call<List<Project>> getExams(@Path("courseId") int courseid);
 
     /**
      * 查看自己账户的作业列表
@@ -26,7 +26,7 @@ public interface CommonService {
      * @return
      */
     @GET("course/{courseId}/homework")
-    Call<List<Project>> getHomework(@Path("courseId") int courseid);
+    Call<List<Project>> getHomeworks(@Path("courseId") int courseid);
 
     /**
      * 查看自己账户的练习列表
@@ -34,5 +34,5 @@ public interface CommonService {
      * @return
      */
     @GET("course/{courseId}/exercise")
-    Call<List<Project>> getExercise(@Path("courseId") int courseid);
+    Call<List<Project>> getExercises(@Path("courseId") int courseid);
 }

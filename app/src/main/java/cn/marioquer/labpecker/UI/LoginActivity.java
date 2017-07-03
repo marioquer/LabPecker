@@ -88,11 +88,13 @@ public class LoginActivity extends AppCompatActivity implements LoginView {
 
     @Override
     public void jumpToHome(String type) {
-        Intent i = new Intent(LoginActivity.this, TeacherMainActivity.class);
-        if (type == "teacher")
-            startActivity(i);
+        Intent i = null;
+
+        if (type.equals("teacher"))
+            i = new Intent(LoginActivity.this, TeacherMainActivity.class);
         else
-            startActivity(i);
+            i = new Intent(LoginActivity.this, StudentMainActivity.class);
+        startActivity(i);
     }
 
     /**

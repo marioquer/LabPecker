@@ -7,9 +7,12 @@ package cn.marioquer.labpecker.View;
 public interface LoginView {
     //按钮点击
     public void doLogin();
+
     //交互相关
     public void showProgress(final boolean show);
+
     public void loginError(boolean isError);
+
     //跳转
     public void jumpToHome(String type);
 }

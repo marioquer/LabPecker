@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="cn.marioquer.labpecker.UI.TeacherMainActivity">
-
+    tools:context="cn.marioquer.labpecker.UI.CourseActivity">
 
     <TabHost
         android:id="@+id/tabHost"
@@ -25,39 +24,55 @@
             <FrameLayout
                 android:id="@android:id/tabcontent"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin">
 
                 <LinearLayout
-                    android:id="@+id/group"
+                    android:id="@+id/exam"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical">
 
                     <ListView
-                        android:id="@+id/group_container"
+                        android:id="@+id/exam_container"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:divider="@android:color/transparent"
-                        android:dividerHeight="0dip"
-                        android:listSelector="@android:color/transparent"></ListView>
+                        android:dividerHeight="0dip"></ListView>
+
 
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/course"
+                    android:id="@+id/homework"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical">
 
                     <ListView
-                        android:id="@+id/course_container"
+                        android:id="@+id/homework_container"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:divider="@android:color/transparent"
-                        android:dividerHeight="0dip"
-                        android:listSelector="@android:color/transparent"></ListView>
+                        android:dividerHeight="0dip"></ListView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/exercise"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <ListView
+                        android:id="@+id/exercise_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:divider="@android:color/transparent"
+                        android:dividerHeight="0dip"></ListView>
                 </LinearLayout>
             </FrameLayout>
         </LinearLayout>
     </TabHost>
+
 </LinearLayout>

@@ -16,17 +16,19 @@
         android:roundIcon="@mipmap/ic_launcher_labpecker"
         android:supportsRtl="true"
         android:theme="@style/Night">
-        <activity android:name=".UI.TeacherMainActivity"></activity>
+        <activity android:name=".UI.TeacherMainActivity" />
         <activity
             android:name=".UI.LoginActivity"
             android:label="@string/app_name">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".UI.CourseActivity" />
+        <activity android:name=".UI.StudentMainActivity" />
+        <activity android:name=".UI.ProjectDetailActivity"></activity>
     </application>
 
 </manifest>

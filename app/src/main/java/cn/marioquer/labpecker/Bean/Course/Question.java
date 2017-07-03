@@ -1,12 +1,14 @@
 package cn.marioquer.labpecker.Bean.Course;
 
+import java.io.Serializable;
+
 import cn.marioquer.labpecker.Bean.User;
 
 /**
  * Created by marioquer on 2017/6/30.
  */
 
-public class Question {
+public class Question implements Serializable{
     int id;
     String title;
     String description;
