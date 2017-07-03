@@ -49,14 +49,6 @@ public class TeacherMainActivity extends AppCompatActivity implements TeacherMai
         teacherMainPresenter.getGroups();
     }
 
-    //进入课程页面
-    @Override
-    public void jumpToCourse(View view) {
-        TextView textView = (TextView) view.findViewById(R.id.item_id);
-        Intent intent = new Intent(this, CourseActivity.class);
-        intent.putExtra("courseId", textView.getText());
-        startActivity(intent);
-    }
 
     //使用自定义的menu
     @Override
@@ -125,5 +117,22 @@ public class TeacherMainActivity extends AppCompatActivity implements TeacherMai
                 new int[]{R.id.info_text, R.id.item_id});
         ListView listView = (ListView) findViewById(R.id.course_container);
         listView.setAdapter(adapter);
+    }
+
+    //进入课程页面
+    @Override
+    public void jumpToCourse(View view) {
+        TextView textView = (TextView) view.findViewById(R.id.item_id);
+        Intent intent = new Intent(this, CourseActivity.class);
+        intent.putExtra("courseId", textView.getText());
+        startActivity(intent);
+    }
+
+    @Override
+    public void jumpToGroup(View view) {
+        TextView textView = (TextView) view.findViewById(R.id.item_id);
+        Intent intent = new Intent(this, GroupActivity.class);
+        intent.putExtra("groupId", textView.getText());
+        startActivity(intent);
     }
 }

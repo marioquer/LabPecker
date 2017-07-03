@@ -28,7 +28,9 @@
         </activity>
         <activity android:name=".UI.CourseActivity" />
         <activity android:name=".UI.StudentMainActivity" />
-        <activity android:name=".UI.ProjectDetailActivity"></activity>
+        <activity android:name=".UI.ProjectDetailActivity" />
+        <activity android:name=".UI.ProjectQuestionDetailActivity" />
+        <activity android:name=".UI.GroupActivity"></activity>
     </application>
 
 </manifest>
