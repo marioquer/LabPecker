@@ -16,9 +16,9 @@
         android:roundIcon="@mipmap/ic_launcher_labpecker"
         android:supportsRtl="true"
         android:theme="@style/Night">
-        <activity android:name=".UI.TeacherMainActivity" />
+        <activity android:name=".UI.Teacher.TeacherMainActivity" />
         <activity
-            android:name=".UI.LoginActivity"
+            android:name=".UI.Common.LoginActivity"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -26,11 +26,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".UI.CourseActivity" />
-        <activity android:name=".UI.StudentMainActivity" />
-        <activity android:name=".UI.ProjectDetailActivity" />
-        <activity android:name=".UI.ProjectQuestionDetailActivity" />
-        <activity android:name=".UI.GroupActivity"></activity>
+        <activity android:name=".UI.Common.CourseActivity" />
+        <activity android:name=".UI.Student.StudentMainActivity" />
+        <activity android:name=".UI.Teacher.ProjectDetailActivity" />
+        <activity android:name=".UI.Teacher.ProjectQuestionDetailActivity" />
+        <activity android:name=".UI.Teacher.GroupActivity" />
+        <activity android:name=".UI.Student.AssignmentAnalysisActivity" />
+        <activity android:name=".UI.Student.QuestionResultActivity" />
+        <activity android:name=".UI.Teacher.AssignmentActivity" />
+        <activity android:name=".UI.Teacher.AssignmentQuestionActivity"></activity>
     </application>
 
 </manifest>

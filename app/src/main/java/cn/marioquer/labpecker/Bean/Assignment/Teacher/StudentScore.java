@@ -1,10 +1,12 @@
 package cn.marioquer.labpecker.Bean.Assignment.Teacher;
 
+import java.io.Serializable;
+
 /**
  * Created by marioquer on 2017/7/2.
  */
 
-public class StudentScore {
+public class StudentScore implements Serializable{
     int studentId;
     String studentName;
     String studentNumber;

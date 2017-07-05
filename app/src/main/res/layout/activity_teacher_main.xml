@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="cn.marioquer.labpecker.UI.TeacherMainActivity">
+    tools:context="cn.marioquer.labpecker.UI.Teacher.TeacherMainActivity">
 
 
     <TabHost
@@ -57,6 +57,23 @@
                         android:dividerHeight="0dip"
                         android:listSelector="@android:color/transparent"></ListView>
                 </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/assignment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <ListView
+                        android:id="@+id/assignment_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:divider="@android:color/transparent"
+                        android:dividerHeight="0dip"
+                        android:listSelector="@android:color/transparent"></ListView>
+
+                </LinearLayout>
+
             </FrameLayout>
         </LinearLayout>
     </TabHost>

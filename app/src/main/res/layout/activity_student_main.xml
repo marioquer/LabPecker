@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="cn.marioquer.labpecker.UI.StudentMainActivity">
-
+    android:orientation="vertical"
+    tools:context="cn.marioquer.labpecker.UI.Student.StudentMainActivity">
 
     <TabHost
         android:id="@+id/tabHost"
@@ -28,13 +28,13 @@
                 android:layout_height="match_parent">
 
                 <LinearLayout
-                    android:id="@+id/group"
+                    android:id="@+id/course"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical">
 
                     <ListView
-                        android:id="@+id/group_container"
+                        android:id="@+id/course_container"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:divider="@android:color/transparent"
@@ -44,13 +44,13 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/course"
+                    android:id="@+id/assignment"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical">
 
                     <ListView
-                        android:id="@+id/course_container"
+                        android:id="@+id/assignment_container"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:divider="@android:color/transparent"

@@ -46,4 +46,9 @@ public class TeacherMainPresenterImpl implements TeacherMainPresenter {
     public void getCourses() {
         teacherMainView.initCourses();
     }
+
+    @Override
+    public void getAssignments() {
+        teacherMainView.initAssignments();
+    }
 }

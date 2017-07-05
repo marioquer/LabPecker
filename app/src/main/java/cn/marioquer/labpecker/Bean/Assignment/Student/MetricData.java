@@ -1,10 +1,12 @@
 package cn.marioquer.labpecker.Bean.Assignment.Student;
 
+import java.io.Serializable;
+
 /**
  * Created by marioquer on 2017/7/2.
  */
 
-public class MetricData {
+public class MetricData implements Serializable {
     String git_url;
     boolean measured;
     int total_line_count;

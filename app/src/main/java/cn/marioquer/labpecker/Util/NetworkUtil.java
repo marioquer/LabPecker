@@ -43,30 +43,4 @@ public class NetworkUtil {
             connection.disconnect();
         }
     }
-
-
-
-
-    public static void main(String[] args){
-//        String username = "nanguangtailang";
-//        String password = "123";
-//
-
-
-        Call<List<Group>> call= RetrofitUtil.getRetroService(TeacherService.class,"liuqin","123").getGroups();
-        call.enqueue(new Callback<List<Group>>() {
-            @Override
-            public void onResponse(Call<List<Group>> call, Response<List<Group>> response) {
-                System.out.println(response.body().get(0).getName());
-            }
-
-            @Override
-            public void onFailure(Call<List<Group>> call, Throwable t) {
-
-            }
-        });
-
-
-
-    }
 }

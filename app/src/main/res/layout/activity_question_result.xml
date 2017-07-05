@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="cn.marioquer.labpecker.UI.Student.QuestionResultActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin">
+
+        <TextView
+            android:id="@+id/question_title"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:textColor="@color/nightColorPrimaryDark"
+            android:textSize="30dp" />
+
+        <TextView
+            android:id="@+id/question_giturl"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:textColor="@color/nightColorPrimary" />
+
+        <TextView
+            android:id="@+id/question_score"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:textColor="@color/nightColorPrimary" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="15dp"
+            android:text="Readme"
+            android:textColor="@color/nightColorPrimaryDark"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/question_readme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="@dimen/activity_horizontal_margin"
+            android:textColor="@color/nightColorPrimary" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="15dp"
+            android:text="统计数据"
+            android:textColor="@color/nightColorPrimaryDark"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/question_line_count"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:textColor="@color/nightColorPrimary" />
+
+        <TextView
+            android:id="@+id/question_comment_count"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:textColor="@color/nightColorPrimary" />
+
+        <TextView
+            android:id="@+id/question_field_count"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:textColor="@color/nightColorPrimary" />
+
+        <TextView
+            android:id="@+id/question_method_count"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:textColor="@color/nightColorPrimary" />
+
+        <TextView
+            android:id="@+id/question_max_coc"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:textColor="@color/nightColorPrimary" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="15dp"
+            android:text="测试结果"
+            android:textColor="@color/nightColorPrimaryDark"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/question_compile_result"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:textColor="@color/nightColorPrimary" />
+
+        <TextView
+            android:id="@+id/question_tested"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:textColor="@color/nightColorPrimary" />
+
+        <ListView
+            android:id="@+id/testcase_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="0dip"
+            android:listSelector="@android:color/transparent"></ListView>
+    </LinearLayout>
+</ScrollView>
+

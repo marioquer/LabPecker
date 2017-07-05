@@ -1,10 +1,12 @@
 package cn.marioquer.labpecker.Bean.Assignment.Teacher;
 
+import java.io.Serializable;
+
 /**
  * Created by marioquer on 2017/7/2.
  */
 
-public class QuestionInfo {
+public class QuestionInfo implements Serializable{
     int id;
     String title;
     String description;

@@ -1,7 +1,9 @@
-package cn.marioquer.labpecker.UI;
+package cn.marioquer.labpecker.UI.Teacher;
 
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.widget.TextView;
 
 import cn.marioquer.labpecker.Bean.Course.Question;
@@ -39,5 +41,21 @@ public class ProjectQuestionDetailActivity extends AppCompatActivity {
         mType.setText("问题类别: " + question.getType());
         mCreator.setText("创建人: " + question.getCreator().getName());
         mDuration.setText("持续时间: " + question.getDuration() + "h");
+
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setTitle("问题详情");
+        actionBar.setDisplayShowTitleEnabled(true);
+        actionBar.setDisplayHomeAsUpEnabled(true);
+        actionBar.setDisplayShowHomeEnabled(false);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:// 点击返回图标事件
+                this.finish();
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 }

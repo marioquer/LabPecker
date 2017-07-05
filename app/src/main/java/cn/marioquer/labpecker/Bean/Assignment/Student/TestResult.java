@@ -1,16 +1,17 @@
 package cn.marioquer.labpecker.Bean.Assignment.Student;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
  * Created by marioquer on 2017/7/2.
  */
 
-public class TestResult {
+public class TestResult implements Serializable {
     String git_url;
     boolean compile_succeeded;
     boolean tested;
-    List<TestCase> testCases;
+    List<TestCase> testcases;
 
     public String getGit_url() {
         return git_url;
@@ -37,10 +38,10 @@ public class TestResult {
     }
 
     public List<TestCase> getTestCases() {
-        return testCases;
+        return testcases;
     }
 
-    public void setTestCases(List<TestCase> testCases) {
-        this.testCases = testCases;
+    public void setTestCases(List<TestCase> testcases) {
+        this.testcases = testcases;
     }
 }

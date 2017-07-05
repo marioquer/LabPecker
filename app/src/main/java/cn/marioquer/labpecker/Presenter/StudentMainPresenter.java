@@ -1,13 +1,10 @@
 package cn.marioquer.labpecker.Presenter;
 
 /**
- * Created by marioquer on 2017/7/3.
+ * Created by marioquer on 2017/7/5.
  */
 
-public interface TeacherMainPresenter {
-
-    public void getGroups();
-
+public interface StudentMainPresenter {
     public void getCourses();
 
     public void getAssignments();

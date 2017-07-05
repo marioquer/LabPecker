@@ -1,10 +1,11 @@
-package cn.marioquer.labpecker.UI;
+package cn.marioquer.labpecker.UI.Common;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
 import android.content.Intent;
 import android.support.design.widget.FloatingActionButton;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 
 import android.os.Build;
@@ -20,6 +21,8 @@ import android.widget.TextView;
 import cn.marioquer.labpecker.Presenter.Impl.LoginPresenterImpl;
 import cn.marioquer.labpecker.Presenter.LoginPresenter;
 import cn.marioquer.labpecker.R;
+import cn.marioquer.labpecker.UI.Student.StudentMainActivity;
+import cn.marioquer.labpecker.UI.Teacher.TeacherMainActivity;
 import cn.marioquer.labpecker.View.LoginView;
 
 /**
@@ -57,6 +60,9 @@ public class LoginActivity extends AppCompatActivity implements LoginView {
                 return false;
             }
         });
+
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setTitle("登录");
 
         FloatingActionButton mEmailSignInButton = (FloatingActionButton) findViewById(R.id.email_sign_in_button);
         mEmailSignInButton.setOnClickListener(new OnClickListener() {

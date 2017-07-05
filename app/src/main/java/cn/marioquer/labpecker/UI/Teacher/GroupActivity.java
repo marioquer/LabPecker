@@ -1,7 +1,9 @@
-package cn.marioquer.labpecker.UI;
+package cn.marioquer.labpecker.UI.Teacher;
 
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 
@@ -27,6 +29,12 @@ public class GroupActivity extends AppCompatActivity implements GroupView {
         groupPresenter = new GroupPresenterImpl(this);
         int groupId = Integer.parseInt(getIntent().getStringExtra("groupId").toString());
         groupPresenter.getStudents(groupId);
+
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setTitle("学生列表");
+        actionBar.setDisplayShowTitleEnabled(true);
+        actionBar.setDisplayHomeAsUpEnabled(true);
+        actionBar.setDisplayShowHomeEnabled(false);
     }
 
     @Override
@@ -44,5 +52,15 @@ public class GroupActivity extends AppCompatActivity implements GroupView {
                 new int[]{R.id.student_name, R.id.student_number});
         ListView listView = (ListView) findViewById(R.id.student_container);
         listView.setAdapter(adapter);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:// 点击返回图标事件
+                this.finish();
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 }

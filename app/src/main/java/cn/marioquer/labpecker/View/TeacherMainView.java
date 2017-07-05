@@ -18,10 +18,14 @@ public interface TeacherMainView {
 
     public void initCourses();
 
+    public void initAssignments();
+
 
     //跳转
     public void jumpToCourse(View view);
 
     public void jumpToGroup(View view);
+
+    public void jumpToAssignment(View view);
 
 }

@@ -1,8 +1,11 @@
-package cn.marioquer.labpecker.UI;
+package cn.marioquer.labpecker.UI.Common;
 
 import android.content.Intent;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
@@ -17,8 +20,8 @@ import java.util.Map;
 import cn.marioquer.labpecker.Bean.Course.Project;
 import cn.marioquer.labpecker.Presenter.CoursePresenter;
 import cn.marioquer.labpecker.Presenter.Impl.CoursePresenterImpl;
-import cn.marioquer.labpecker.Presenter.Impl.TeacherMainPresenterImpl;
 import cn.marioquer.labpecker.R;
+import cn.marioquer.labpecker.UI.Teacher.ProjectDetailActivity;
 import cn.marioquer.labpecker.View.CourseView;
 
 public class CourseActivity extends AppCompatActivity implements CourseView {
@@ -27,6 +30,7 @@ public class CourseActivity extends AppCompatActivity implements CourseView {
     List<Project> exams;
     List<Project> homeworks;
     List<Project> exercises;
+    Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +39,13 @@ public class CourseActivity extends AppCompatActivity implements CourseView {
         coursePresenter = new CoursePresenterImpl(this);
         final Intent intent = getIntent();
         final int courseId = Integer.parseInt(intent.getStringExtra("courseId"));
+
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setTitle("项目列表");
+        actionBar.setDisplayShowTitleEnabled(true);
+        actionBar.setDisplayHomeAsUpEnabled(true);
+        actionBar.setDisplayShowHomeEnabled(false);
+
         TabHost tabHost = (TabHost) findViewById(R.id.tabHost);
         tabHost.setup();
         tabHost.addTab(tabHost.newTabSpec("exam").setIndicator("考试").setContent(R.id.exam));
@@ -149,5 +160,16 @@ public class CourseActivity extends AppCompatActivity implements CourseView {
             }
         }
         startActivity(intent);
+    }
+
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:// 点击返回图标事件
+                this.finish();
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 }

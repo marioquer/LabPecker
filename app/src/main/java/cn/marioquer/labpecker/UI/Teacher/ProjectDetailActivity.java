@@ -1,9 +1,10 @@
-package cn.marioquer.labpecker.UI;
+package cn.marioquer.labpecker.UI.Teacher;
 
 import android.content.Intent;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
@@ -16,7 +17,6 @@ import java.util.List;
 import java.util.Map;
 
 import cn.marioquer.labpecker.Bean.Course.Project;
-import cn.marioquer.labpecker.Bean.Course.Question;
 import cn.marioquer.labpecker.R;
 import cn.marioquer.labpecker.View.ProjectDetailView;
 
@@ -72,6 +72,12 @@ public class ProjectDetailActivity extends AppCompatActivity implements ProjectD
                 break;
         }
         initQuestions();
+
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setTitle("项目详情");
+        actionBar.setDisplayShowTitleEnabled(true);
+        actionBar.setDisplayHomeAsUpEnabled(true);
+        actionBar.setDisplayShowHomeEnabled(false);
     }
 
     @Override
@@ -98,5 +104,15 @@ public class ProjectDetailActivity extends AppCompatActivity implements ProjectD
         Intent intent = new Intent(this, ProjectQuestionDetailActivity.class);
         intent.putExtra("question", project.getQuestions().get(Integer.parseInt(textView.getText().toString())));
         startActivity(intent);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:// 点击返回图标事件
+                this.finish();
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 }

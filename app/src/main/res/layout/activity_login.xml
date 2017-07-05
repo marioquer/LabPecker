@@ -9,7 +9,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:background="@color/nightColorPrimary"
-    tools:context="cn.marioquer.labpecker.UI.LoginActivity">
+    tools:context="cn.marioquer.labpecker.UI.Common.LoginActivity">
 
     <!-- Login progress -->
     <ProgressBar
@@ -29,17 +29,17 @@
             android:id="@+id/username_login_form"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="30dp"
             android:gravity="center_horizontal"
             android:orientation="vertical">
 
             <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:background="@mipmap/ic_launcher_labpecker" />
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:background="@mipmap/login_logo" />
 
             <android.support.design.widget.TextInputLayout
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 

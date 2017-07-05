@@ -1,10 +1,12 @@
 package cn.marioquer.labpecker.Bean.Assignment.Student;
 
+import java.io.Serializable;
+
 /**
  * Created by marioquer on 2017/7/2.
  */
 
-public class ScoreResult {
+public class ScoreResult implements Serializable{
     String git_url;
     int score;
     boolean scored;
